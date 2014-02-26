@@ -19,6 +19,7 @@ end
 
 group :development, :test do
 	gem 'rspec-rails'
+	#gem 'guard-rspec', '2.5.0'
 end
 
 group :test do
