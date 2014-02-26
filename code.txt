@@ -1,0 +1,144 @@
+student@MATC1234:~$ cd rails_projects/sample_app
+student@MATC1234:~/rails_projects/sample_app$ rails console
+Loading development environment (Rails 4.0.2)
+2.0.0-p353 :001 > 5+9
+ => 14 
+2.0.0-p353 :002 > 5+5
+ => 10 
+2.0.0-p353 :003 > ^C
+2.0.0-p353 :003 > 
+student@MATC1234:~/rails_projects/sample_app$ rails c
+Loading development environment (Rails 4.0.2)
+2.0.0-p353 :001 > ""
+ => "" 
+2.0.0-p353 :002 > "foo"
+ => "foo" 
+2.0.0-p353 :003 > "foo" + "bar"
+ => "foobar" 
+2.0.0-p353 :004 > first_name = "earl"
+ => "earl" 
+2.0.0-p353 :005 > "#{first_name} Cameron"
+ => "earl Cameron" 
+2.0.0-p353 :006 > last_name = "cameron"
+ => "cameron" 
+2.0.0-p353 :007 > "#{first_name} #{last_name}"
+ => "earl cameron" 
+2.0.0-p353 :008 > first_name + " " + last_name
+ => "earl cameron" 
+2.0.0-p353 :009 > puts first_name
+earl
+ => nil 
+2.0.0-p353 :010 > print first_name
+earl => nil 
+2.0.0-p353 :011 > print first_name\n
+2.0.0-p353 :012 > print first_name"\n"
+SyntaxError: (irb):11: syntax error, unexpected $undefined
+print first_name\n
+                 ^
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+2.0.0-p353 :013 > print first_name + "\n"
+earl
+ => nil 
+2.0.0-p353 :014 > first_name.length
+ => 4 
+2.0.0-p353 :015 > last_name.length
+ => 7 
+2.0.0-p353 :016 > last_name.empty
+NoMethodError: undefined method `empty' for "cameron":String
+	from (irb):16
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+2.0.0-p353 :017 > last_name.empty?
+ => false 
+2.0.0-p353 :018 > foo = '';
+2.0.0-p353 :019 >   foo.empty?
+ => true 
+2.0.0-p353 :020 > foo
+ => "" 
+2.0.0-p353 :021 > bar
+NameError: undefined local variable or method `bar' for main:Object
+	from (irb):21
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+2.0.0-p353 :022 > bar.empty?
+NameError: undefined local variable or method `bar' for main:Object
+	from (irb):22
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+2.0.0-p353 :023 > def string_message(arg)
+2.0.0-p353 :024?>   return "The string is not empty" unless string.empty?
+2.0.0-p353 :025?>   end
+ => nil 
+2.0.0-p353 :026 > string_message
+ArgumentError: wrong number of arguments (0 for 1)
+	from (irb):23:in `string_message'
+	from (irb):26
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/student/.rvm/gems/ruby-2.0.0-p353@sample_app/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+2.0.0-p353 :027 > def string_message(arg)
+2.0.0-p353 :028?>   return "string is not empty" unless arg.empty?
+2.0.0-p353 :029?>   end
+ => nil 
+2.0.0-p353 :030 > string_message("hahahah");
+2.0.0-p353 :031 >   
+2.0.0-p353 :032 >   puts string_message('')
+
+ => nil 
+2.0.0-p353 :033 > puts string_message('something')
+string is not empty
+ => nil 
+2.0.0-p353 :034 > def string_message(arg)
+2.0.0-p353 :035?>   return "not empty" unless arg.empty?
+2.0.0-p353 :036?>   return "empty"
+2.0.0-p353 :037?>   end
+ => nil 
+2.0.0-p353 :038 > puts string_message('');
+2.0.0-p353 :039 >   ;
+2.0.0-p353 :040 >   puts string_message('')
+empty
+empty
+ => nil 
+2.0.0-p353 :041 > def string_message(arg)
+2.0.0-p353 :042?>   return 'not empty' unless arg.empty?
+2.0.0-p353 :043?>   return 'empty' unless !arg.empty?
+2.0.0-p353 :044?>   end
+ => nil 
+2.0.0-p353 :045 > puts string_message('')
+empty
+ => nil 
+2.0.0-p353 :046 > puts string_message('testing')
+not empty
+ => nil 
+2.0.0-p353 :047 > require './example_user'
+ => true 
+2.0.0-p353 :048 > example = User.new
+ => #<User:0xaa7b098 @name=nil, @email=nil> 
+2.0.0-p353 :049 > example.name
+ => nil 
+2.0.0-p353 :050 > example.name = "Earl"
+ => "Earl" 
+2.0.0-p353 :051 > example.email = "JWeiner@madisoncollege.edu"
+ => "JWeiner@madisoncollege.edu" 
+2.0.0-p353 :052 > example.formatted_email
+ => "Earl <JWeiner@madisoncollege.edu>" 
+2.0.0-p353 :053 > user = User.new(name: "Earl Cameron", email: "JWeiner@madisoncollege.edu")
+ => #<User:0xaa8e850 @name="Earl Cameron", @email="JWeiner@madisoncollege.edu"> 
+2.0.0-p353 :054 > user.formatted_email
+ => "Earl Cameron <JWeiner@madisoncollege.edu>" 
+2.0.0-p353 :055 > 
