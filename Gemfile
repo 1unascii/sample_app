@@ -28,7 +28,7 @@ group :test do
 	gem 'capybara'
 end
 
-group :doc dogit sta
+group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
