@@ -13,6 +13,8 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 # gem 'capybara'
 
 group :production do 
@@ -21,6 +23,8 @@ end
 
 group :development, :test do
 	gem 'rspec-rails'
+	gem 'faker', '1.1.2'
+
 end
 
 group :test do
